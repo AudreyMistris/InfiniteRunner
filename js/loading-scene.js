@@ -24,12 +24,16 @@ export default class LoadingScene extends Phaser.Scene {
             this.scene.start('GameScene');
         });
 
-        // this.load.image('room', '...');
-        // this.load.image('floor', '...');
-        // this.load.image('platform', '...');
+        this.load.image('room', 'background.png');
+        this.load.image('floor', 'Platform03.png');
+        this.load.image('platform1', 'Platform01.png');
+        this.load.image('platform2', 'Platform02.png');
+        this.load.image('platform3', 'Platform03.png');
+        this.load.image('platform4', 'Platform04.png');
+        this.load.image('platform5', 'Platform05.png');
         // this.load.audio('theme', '...');
         // this.load.sound();
-        // this.load.spritesheet('sprite', '...', { frameWidth: 38.5, frameHeight: 49.5 });
+        this.load.spritesheet('sprite', 'adventurer-Sheet.png', { frameWidth: 50, frameHeight: 37 });
 
     
     }
