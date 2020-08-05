@@ -3,8 +3,9 @@ import GameScene from './game-scene.js';
 
 const CONFIG = {
     type: Phaser.AUTO,
-    width: 549,
-    height: 360,
+    width: 600,
+    height: 600,
+    backgroundColor: 0x444444,
     parent: 'jogo-runner',
 
     physics: {
