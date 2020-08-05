@@ -59,7 +59,7 @@ export default class GameScene extends Phaser.Scene {
         }
 
         if (this.teclas.up.isDown && PLAYER.body.touching.down) {
-            PLAYER.setVelocityY(-200);
+            PLAYER.setVelocityY(-120);
             PLAYER.anims.play('jump')
         }
     }
