@@ -25,9 +25,12 @@ export default class GameScene extends Phaser.Scene {
         BGM.play(); */
 
         const PLATAFORMAS = this.physics.add.staticGroup();
-        // PLATAFORMAS.create(465, 360 - 20, 'platform').setOrigin(0, 0).refreshBody();
-
-        // PLATAFORMAS.create(0, 170, 'floor').setOrigin(0, 0).refreshBody();
+        // Teste
+        PLATAFORMAS.create(100, 500, 'platform1').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(150, 600, 'platform2').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(300, 400, 'platform3').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(450, 700, 'platform4').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(600, 300, 'platform5').setOrigin(0, 0).refreshBody();
 
         this.player = new Player(this);
         this.physics.add.collider(this.player.sprite, PLATAFORMAS);
