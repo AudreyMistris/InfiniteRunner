@@ -26,11 +26,11 @@ export default class GameScene extends Phaser.Scene {
 
         const PLATAFORMAS = this.physics.add.staticGroup();
         // Teste
-        PLATAFORMAS.create(100, 500, 'platform1').setOrigin(0, 0).refreshBody();
-        PLATAFORMAS.create(150, 600, 'platform2').setOrigin(0, 0).refreshBody();
-        PLATAFORMAS.create(300, 400, 'platform3').setOrigin(0, 0).refreshBody();
-        PLATAFORMAS.create(450, 700, 'platform4').setOrigin(0, 0).refreshBody();
-        PLATAFORMAS.create(600, 300, 'platform5').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(150, 400, 'rectangle_platform').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(500, 200, 'thin_platform').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(100, 200, 'long_platform').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(250, 300, 'standing_platform').setOrigin(0, 0).refreshBody();
+        PLATAFORMAS.create(400, 300, 'square_platform').setOrigin(0, 0).refreshBody();
 
         this.player = new Player(this);
         this.physics.add.collider(this.player.sprite, PLATAFORMAS);
@@ -41,12 +41,12 @@ export default class GameScene extends Phaser.Scene {
         const PLAYER = this.player.sprite;
 
         if (this.teclas.left.isDown) {
-            PLAYER.setVelocityX(-160);
+            PLAYER.setVelocityX(-200);
             PLAYER.setFlip(true, false)
             PLAYER.anims.play('left', true);
 
         } else if (this.teclas.right.isDown) {
-            PLAYER.setVelocityX(160);
+            PLAYER.setVelocityX(200);
             PLAYER.setFlip(false, false)
             PLAYER.anims.play('right', true);
 
@@ -59,7 +59,7 @@ export default class GameScene extends Phaser.Scene {
         }
 
         if (this.teclas.up.isDown && PLAYER.body.touching.down) {
-            PLAYER.setVelocityY(-100);
+            PLAYER.setVelocityY(-200);
             PLAYER.anims.play('jump')
         }
     }
