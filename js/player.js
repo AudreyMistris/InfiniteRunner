@@ -31,7 +31,7 @@ export default class Player {
         scene.anims.create({
             key: 'jump',
             frames: scene.anims.generateFrameNumbers('sprite', { start: 12, end: 13 }),
-            frameRate: 4,
+            frameRate: 3,
             repeat: -1
         });
     }
