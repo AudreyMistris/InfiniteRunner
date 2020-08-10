@@ -119,24 +119,9 @@ class playGame extends Phaser.Scene {
         super("PlayGame");
     }
 
-    /* preload() {
-        this.load.image('background', 'sky.png');
-        // this.load.image('background', 'simple_bg.png');
-        // this.load.image('background', 'dawn.png');
-        // this.load.image('background', 'twilight.png');
-        this.load.image('coin', 'Ruby.png');
-        this.load.image('enemy', 'bomb.png');
-        this.load.image("platform", "Platform03.png");
+    preload() {
 
-        this.load.spritesheet('sprite', 'character_spritesheet_3px.png', {
-            frameWidth: 29,
-            frameHeight: 43
-        });
-        this.load.spritesheet('ruby', 'ruby_spritesheet.png', {
-            frameWidth: 25,
-            frameHeight: 26
-        });
-    } */
+    }
 
     create() {
 
